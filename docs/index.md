@@ -31,7 +31,8 @@ print(bga.best_objective_value)
 ```
 
 
-```{toctree}
 :maxdepth: 2
 :caption: Contents:
 
+Optimizers/base_genetic.md
+Optimizers/salp_swarm_algorithm.md
