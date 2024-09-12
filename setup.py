@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='bejoor',
-    version='0.0.1',
+    version='0.0.4',
     author='Mohammad Mahmoodi Varnamkhasti',
     author_email='research@amzmohammad.com',
     description='This project is a collection of optimization algorithms.',

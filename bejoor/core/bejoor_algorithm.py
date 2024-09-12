@@ -19,6 +19,7 @@ class BejoorAlgorithm:
         if len(solution_vector) != solution_vector_size:
             raise ValueError(f"The 'types' list must have exactly {solution_vector_size} elements.")
 
+        self.optimizer_name = "Core Optimizer"
         self.population_size = population_size
         self.epochs = epochs
         self.objective_function = objective_function
@@ -107,15 +108,17 @@ class BejoorAlgorithm:
 
     def run(self):
         """Run the algorithm."""
-        self.initialize_population()
-        self.evaluate_all_objectives()
+        self.initialize_population()  # Initialize population
+        self.evaluate_all_objectives()  # Evaluate initial population
+
+        # Set the initial best solution and objective value
+        self.best_solution = self.population[0].values
+        self.best_objective_value = self.population[0].objective_value
 
         print(len(self.population))
-        for epoch_index in range(1,self.epochs):
+        for epoch_index in range(1, self.epochs):
             self.update()
 
-            self.best_solution = self.population[0].values
-            self.best_objective_value = self.population[0].objective_value
-
-            print(f'Epoch #{epoch_index}: best:{self.best_objective_value} - {len(self.population)}')
-
+            # Log the progress
+            print(
+                f'{self.optimizer_name} (pop:{len(self.population)}) | Epoch #{epoch_index}: best:{self.best_objective_value}')

@@ -12,6 +12,7 @@ class ToyGeneticAlgorithm(BejoorAlgorithm):
         """
 
         super().__init__(*args, **kwargs)
+        self.optimizer_name = "Toy Genetic"
         self.mutation_probability = mutation_probability
 
     def select_parents(self):
