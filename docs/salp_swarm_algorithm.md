@@ -23,3 +23,21 @@ ssa.run()
 print(ssa.best_solution)
 print(ssa.best_objective_value)
 ```
+
+# BibTeX citation to the algorithm:
+
+```bibtex
+@article{mirjalili2017salp,
+  title={Salp Swarm Algorithm: A bio-inspired optimizer for engineering design problems},
+  author={Mirjalili, Seyedali and Gandomi, Amir H and Mirjalili, Seyedeh Zahra and Saremi, Shahrzad and Faris, Hossam and Mirjalili, Seyed Mohammad},
+  journal={Advances in engineering software},
+  volume={114},
+  pages={163--191},
+  year={2017},
+  publisher={Elsevier}
+}
+```
+
+# More Available Resources about the algorithm:
+
+[Salp swarm algorithm: a comprehensive survey](https://link.springer.com/article/10.1007/s00521-019-04629-4)
