@@ -11,6 +11,7 @@ class SalpSwarmAlgorithm(BejoorAlgorithm):
         :param c_1: Exploration-Exploitation Coefficient (used to balance exploration and exploitation).
         """
         super().__init__(*args, **kwargs)
+        self.optimizer_name = "Salp Swarm Algorithm"
         self.leader = None
         self.followers = []
         self.c_1 = c_1

@@ -1,8 +1,11 @@
 import random
 from bejoor.core.individual import Individual
 
+
 class BejoorAlgorithm:
-    def __init__(self, objective_function, solution_vector_size, solution_vector, optimization_side , population_size=10, epochs=5):
+    def __init__(self, objective_function, solution_vector_size, solution_vector, optimization_side,
+                 target_objective_value=None, target_objective_lower_bound=None, target_objective_upper_bound=None,
+                 population_size=10, epochs=5):
         """
         Initialize the base parameters for the optimization algorithm.
 
@@ -10,6 +13,9 @@ class BejoorAlgorithm:
         :param solution_vector_size: Vector size of the candidate solutions.
         :param solution_vector: A vector which determines the types of each variable in solution vectors.
         :param optimization_side: Determines maximize or minimize the objective function.
+        :param target_objective_value: Target Objective value.
+        :param target_objective_lower_bound: Target Objective lower bound.
+        :param target_objective_upper_bound: Target Objective upper bound.
         :param population_size: Number of individuals in the population
         :param epochs: Number of generations to run the algorithm
         """
@@ -25,6 +31,9 @@ class BejoorAlgorithm:
         self.objective_function = objective_function
         self.solution_vector_size = solution_vector_size
         self.optimization_side = optimization_side
+        self.target_objective_value = target_objective_value
+        self.target_objective_lower_bound = target_objective_lower_bound
+        self.target_objective_upper_bound = target_objective_upper_bound
         self.solution_vector = solution_vector
         self.population = []
         self.best_objective_value = None
@@ -120,5 +129,19 @@ class BejoorAlgorithm:
             self.update()
 
             # Log the progress
-            print(
-                f'{self.optimizer_name} (pop:{len(self.population)}) | Epoch #{epoch_index}: best:{self.best_objective_value}')
+            print(f'{self.optimizer_name} (pop:{len(self.population)}) |'
+                  f' Epoch #{epoch_index}: best:{self.best_objective_value}')
+
+            if self.target_objective_value is not None and self.best_objective_value == self.target_objective_value:
+                print(f"Target Objective Value ({self.best_objective_value}) reached before end of all iterations.")
+                break
+
+            if self.target_objective_lower_bound is not None and self.best_objective_value >= self.target_objective_lower_bound:
+                print(f"Target Objective lower bound ({self.best_objective_value}) reached before end of all iterations.")
+                break
+
+            if self.target_objective_upper_bound is not None and self.best_objective_value <= self.target_objective_upper_bound:
+                print(f"Target Objective upper bound ({self.best_objective_value}) reached before end of all iterations.")
+                break
+
+

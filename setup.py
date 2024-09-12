@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='bejoor',
-    version='0.0.4',
+    version='0.0.7',
     author='Mohammad Mahmoodi Varnamkhasti',
     author_email='research@amzmohammad.com',
     description='This project is a collection of optimization algorithms.',
-    long_description=open('README.md').read(),
+    long_description=open('docs/package_index.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/MohammadDevelop/Bejoor',
     packages=find_packages(),
@@ -24,7 +24,4 @@ setup(
     install_requires=[
         'numpy>=2.1.0',
     ],
-    extras_require={
-        "dev": ["twine>=4.0.1"],
-    },
 )
