@@ -30,7 +30,10 @@ print(bga.best_solution)
 print(bga.best_objective_value)
 ```
 
-## Optimizers
 
-[BaseGeneticAlgorithm](base_genetic.md)
-[SalpSwarmAlgorithm](salp_swarm_algorithm.md)
+```{toctree}
+:maxdepth: 2
+:caption: Contents:
+
+[base_genetic.md](base_genetic.md)
+[salp_swarm_algorithm.md](salp_swarm_algorithm.md)
