@@ -35,5 +35,3 @@ print(bga.best_objective_value)
 :maxdepth: 2
 :caption: Contents:
 
-[base_genetic.md](base_genetic.md)
-[salp_swarm_algorithm.md](salp_swarm_algorithm.md)

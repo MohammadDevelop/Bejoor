@@ -32,5 +32,5 @@ print(bga.best_objective_value)
 
 ## Optimizers
 
-[BaseGeneticAlgorithm](docs/base_genetic.md)
-[SalpSwarmAlgorithm](docs/salp_swarm_algorithm.md)
+[BaseGeneticAlgorithm](docs/Optimizers/base_genetic.md)
+[SalpSwarmAlgorithm](docs/Optimizers/salp_swarm_algorithm.md)
