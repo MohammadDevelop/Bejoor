@@ -2,15 +2,17 @@
 
 This package is a collection of optimization algorithms. The aim is high diversity of optimizers and eased of use. 
 
+For documentation, [Visit this](https://amzmohammad.com/bejoor/).
+
 ## Installation
     pip install bejoor
 
-# Usage
+# Sample Usage
 ```python
 from bejoor.genetic import BaseGeneticAlgorithm
 
 def func(sol):
-    return abs( (sol[0]**sol[3] + sol[1]**sol[3] - sol[2]**sol[3]))
+    return abs((sol[0]**sol[3] + sol[1]**sol[3] - sol[2]**sol[3]))
 
 
 solution_vector =  [{"type": "integer", "lower_bound": 1, "upper_bound": 500}] * 3 + \
@@ -29,8 +31,3 @@ bga.run()
 print(bga.best_solution)
 print(bga.best_objective_value)
 ```
-
-## Optimizers
-
-[BaseGeneticAlgorithm](docs/Optimizers/base_genetic.md)
-[SalpSwarmAlgorithm](docs/Optimizers/salp_swarm_algorithm.md)

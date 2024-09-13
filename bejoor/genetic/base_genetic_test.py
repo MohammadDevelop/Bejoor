@@ -12,9 +12,8 @@ solution_vector =  [{"type": "integer", "lower_bound": 1, "upper_bound": 500}] *
 bga = BaseGeneticAlgorithm(objective_function=func, solution_vector_size=7,
                            solution_vector=solution_vector, optimization_side="min", target_objective_upper_bound=5,
                            crossover_probability=0.9, mutation_probability=0.1,
-                           elitism_rate=0.05, selection_strategy="roulette",
+                           elitism_rate=0.05, selection_strategy="tournament",
                            crossover_type="one-point", population_size=500, epochs=200)
-
 bga.run()
 
 print(bga.best_solution)

@@ -1,4 +1,6 @@
-This project is a collection of optimization algorithms.
+This package is a collection of optimization algorithms. The aim is high diversity of optimizers and eased of use. 
+
+For documentation, [Visit this](https://amzmohammad.com/bejoor/).
 
 # Usage
 ```python

@@ -38,7 +38,8 @@ class BejoorAlgorithm:
         self.population = []
         self.best_objective_value = None
         self.best_solution = None
-
+        self.global_best_objective_value = None
+        self.global_best_solution = None
     def initialize_population(self):
         """Initialize the population for the evolutionary algorithm."""
         self.population = []
@@ -124,13 +125,17 @@ class BejoorAlgorithm:
         self.best_solution = self.population[0].values
         self.best_objective_value = self.population[0].objective_value
 
+        self.global_best_solution = self.population[0].values
+        self.global_best_objective_value = self.population[0].objective_value
+
         print(len(self.population))
         for epoch_index in range(1, self.epochs):
             self.update()
 
             # Log the progress
             print(f'{self.optimizer_name} (pop:{len(self.population)}) |'
-                  f' Epoch #{epoch_index}: best:{self.best_objective_value}')
+                  f' Epoch #{epoch_index}: Current best:{self.best_objective_value}'
+                  f' Global best:{self.global_best_objective_value}')
 
             if self.target_objective_value is not None and self.best_objective_value == self.target_objective_value:
                 print(f"Target Objective Value ({self.best_objective_value}) reached before end of all iterations.")

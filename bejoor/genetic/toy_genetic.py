@@ -82,3 +82,9 @@ class ToyGeneticAlgorithm(BejoorAlgorithm):
         # Update the best solution
         self.best_solution = self.population[0].values
         self.best_objective_value = self.population[0].objective_value
+
+        # Update the global best solution
+        if ((self.global_best_objective_value < self.best_objective_value and self.optimization_side =='max') or
+                (self.global_best_objective_value > self.best_objective_value and self.optimization_side == 'min')):
+            self.global_best_solution = self.best_solution
+            self.global_best_objective_value = self.best_objective_value

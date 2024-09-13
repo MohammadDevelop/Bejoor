@@ -70,3 +70,9 @@ class SalpSwarmAlgorithm(BejoorAlgorithm):
         # Update the exploration-exploitation coefficient (c_1) to decrease over time
         self.c_1 = 2 * math.exp(-4 * self.epoch_counter / self.epochs)
         self.epoch_counter += 1
+
+        # Update the global best solution
+        if ((self.global_best_objective_value < self.best_objective_value and self.optimization_side =='max') or
+                (self.global_best_objective_value > self.best_objective_value and self.optimization_side == 'min')):
+            self.global_best_solution = self.best_solution
+            self.global_best_objective_value = self.best_objective_value
