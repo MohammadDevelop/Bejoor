@@ -116,9 +116,14 @@ class BejoorAlgorithm:
 
         pass
 
-    def run(self):
+    def run(self, init_population=None):
         """Run the algorithm."""
-        self.initialize_population()  # Initialize population
+        # Initialize population randomly if not specified
+        if init_population is None:
+            self.initialize_population()
+        else:
+            self.population = init_population
+
         self.evaluate_all_objectives()  # Evaluate initial population
 
         # Set the initial best solution and objective value
