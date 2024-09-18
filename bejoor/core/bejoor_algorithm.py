@@ -123,6 +123,10 @@ class BejoorAlgorithm:
             self.initialize_population()
         else:
             self.population = init_population
+            while len(self.population) < self.population_size:
+                self.population = self.population + init_population
+            if len(self.population) > self.population_size:
+                self.population = self.population[:self.population_size]
 
         self.evaluate_all_objectives()  # Evaluate initial population
 

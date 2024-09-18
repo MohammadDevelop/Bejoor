@@ -31,3 +31,30 @@ bga.run()
 print(bga.best_solution)
 print(bga.best_objective_value)
 ```
+### Basic Parameters of Optimizers:
+- objective_function: Objective function needs to be optimized.
+- solution_vector_size: Vector size of the candidate solutions.
+- solution_vector: A vector which determines the types of each variable in solution vectors.
+- optimization_side: Determines maximize or minimize the objective function.
+- target_objective_value: Target Objective value.
+- target_objective_lower_bound: Target Objective lower bound.
+- target_objective_upper_bound: Target Objective upper bound.
+- population_size: Number of individuals in the population
+- epochs: Number of generations to run the algorithm
+
+
+[//]: # (## Support the Project)
+
+[//]: # (If you find this project useful and would like to support its continued development, feel free to make a donation:)
+
+[//]: # ()
+[//]: # (- **Bitcoin &#40;BTC&#41;**: `your-bitcoin-address-here`)
+
+[//]: # (- **Ethereum &#40;ETH&#41;**: `your-ethereum-address-here`)
+
+[//]: # (- **Litecoin &#40;LTC&#41;**: `your-litecoin-address-here`)
+
+[//]: # (- **Tron &#40;TRX&#41;**: `your-litecoin-address-here`)
+
+[//]: # ()
+[//]: # (Any contribution is greatly appreciated!)
