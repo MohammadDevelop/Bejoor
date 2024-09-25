@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='bejoor',
-    version='0.1.3',
+    version='0.1.5',
     author='Mohammad Mahmoodi Varnamkhasti',
     author_email='research@amzmohammad.com',
     description='This project is a collection of optimization algorithms.',
@@ -22,6 +22,6 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        'numpy>=2.1.0',
+        'numpy>=1.26.4',
     ],
 )

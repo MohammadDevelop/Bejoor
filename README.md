@@ -43,18 +43,18 @@ print(bga.best_objective_value)
 - epochs: Number of generations to run the algorithm
 
 
-[//]: # (## Support the Project)
+## Support the Project
 
-[//]: # (If you find this project useful and would like to support its continued development, feel free to make a donation:)
+If you find this project useful and would like to support its continued development, feel free to make a donation:
 
-[//]: # ()
-[//]: # (- **Bitcoin &#40;BTC&#41;**: `your-bitcoin-address-here`)
 
-[//]: # (- **Ethereum &#40;ETH&#41;**: `your-ethereum-address-here`)
+- **Bitcoin (BTC)**: bc1qnfp9nwlkdl56f26rl8pfxs5aulwhs837dczkwk
 
-[//]: # (- **Litecoin &#40;LTC&#41;**: `your-litecoin-address-here`)
+- **Ethereum (ETH)**: 0xfd12EA62bA71146b12B0a203032132b8AE98C4f4
 
-[//]: # (- **Tron &#40;TRX&#41;**: `your-litecoin-address-here`)
+- **Litecoin (LTC)**: ltc1q5j254rrr30v3zds5ygs23xp2a4rmzsp22q8l4k
 
-[//]: # ()
-[//]: # (Any contribution is greatly appreciated!)
+- **Tron (TRX)**: TBA4cBR2ov6x7Vjby9dT88dy4VZiZ9gC81
+
+
+Any contribution is greatly appreciated!
