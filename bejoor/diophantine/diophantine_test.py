@@ -1,5 +1,5 @@
-from bejoor.diophantine.Diophantine import DiophantineEquation
-from bejoor.genetic import BaseGeneticAlgorithm
+from bejoor.diophantine import DiophantineEquation
+from bejoor.genetic import BaseGeneticAlgorithm,MemeticAlgorithm
 
 # Define a system of Diophantine equations
 equation_system = [
@@ -8,13 +8,13 @@ equation_system = [
 ]
 
 # Define bounds for the variables
-lower_bounds = [-50] * 3
-upper_bounds = [50] * 3
+lower_bounds = [-100] * 2
+upper_bounds = [100] * 2
 
 # Create a DiophantineEquation instance
-diophantine_eq = DiophantineEquation(equation_system, num_variables=3, lower_bound=lower_bounds, upper_bound=upper_bounds)
+diophantine_eq = DiophantineEquation(equation_system, num_variables=2, lower_bound=lower_bounds, upper_bound=upper_bounds)
 
-best_solution, best_objective_value = diophantine_eq.solve(BaseGeneticAlgorithm, population_size=300, epochs=200)
+best_solution, best_objective_value = diophantine_eq.solve(BaseGeneticAlgorithm, population_size=50, epochs=200)
 
 print("Best solution:", best_solution)
 print("Best objective value:", best_objective_value)
