@@ -56,5 +56,3 @@ If you find this project useful and would like to support its continued developm
 
 - **Tron (TRX)**: TBA4cBR2ov6x7Vjby9dT88dy4VZiZ9gC81
 
-
-Any contribution is greatly appreciated!
